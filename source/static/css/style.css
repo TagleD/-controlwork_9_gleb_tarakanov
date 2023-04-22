@@ -214,3 +214,21 @@ button {
     margin-left: 16px;
     margin-bottom: 10px;
 }
+
+.button-detail-margins {
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+
+.button-favorite-post {
+    border: none;
+    background: none;
+}
+
+.svg-color {
+    color: #64ac8f;
+}
+
+.carousel-margin {
+    margin-top: 40px;
+}

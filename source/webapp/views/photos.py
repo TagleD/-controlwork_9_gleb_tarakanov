@@ -49,6 +49,8 @@ class PhotoDetailView(DetailView):
     model = Photo
 
 
+
+
 class PhotoDeleteView(UserPassesTestMixin, DeleteView):
     model = Photo
     permission_denied_message = 'У вас нет прав доступа'

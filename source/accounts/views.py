@@ -58,6 +58,11 @@ class UserDetailView(DetailView):
     model = get_user_model()
     context_object_name = 'user_obj'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['favorite_photos'] = self.request.user.user_favorites.all()
+        return context
+
 
 class UserUpdateView(UpdateView):
     template_name = 'user_update.html'

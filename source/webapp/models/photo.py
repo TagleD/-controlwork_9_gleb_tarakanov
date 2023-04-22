@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -25,6 +26,11 @@ class Photo(models.Model):
         verbose_name='Фотографии',
         null=False,
         on_delete=models.CASCADE,
+    )
+    user_favorites = models.ManyToManyField(
+        verbose_name='Избранные фотографии',
+        to=get_user_model(),
+        related_name='user_favorites'
     )
 
     def __str__(self):

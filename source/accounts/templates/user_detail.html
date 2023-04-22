@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="container main-container">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-between">
             <div class="col-5 card text-bg-light form-margins">
                 <h3>Личный кабинет</h3>
                 <table class="table">
@@ -47,6 +47,18 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-6 carousel-margin">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for photo in favorite_photos %}
+                            <div class="carousel-item active">
+                                <img src="{{ photo.image.url }}" class="d-block w-100" alt="{{ photo.caption }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 {% endblock %}
