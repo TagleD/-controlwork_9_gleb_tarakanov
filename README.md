@@ -9,4 +9,7 @@
 4) ```pip install -r requirements.txt```
 5) перемещаемся в source ```cd source ```
 6) настраиваем в файле source/app/settings.py на свою базу данных
-7) 
+7) прописываем в консоли ./manage.py migrate
+8) прописываем ./manage.py loaddata fixtures/auth.json
+9) прописываем ./manage.py loaddata fixtures/webapp.json
+10) прописываем ./manage.py runserver
