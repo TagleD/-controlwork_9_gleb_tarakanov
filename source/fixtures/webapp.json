@@ -1,0 +1,92 @@
+[
+{
+  "model": "webapp.photo",
+  "pk": 1,
+  "fields": {
+    "image": "photos/pxfuel-2.jpg",
+    "caption": "Киберпанк",
+    "created_at": "2023-04-22T07:36:40.862Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 2,
+  "fields": {
+    "image": "photos/pxfuel-4.jpg",
+    "caption": "Темный лес",
+    "created_at": "2023-04-22T08:32:59.616Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 3,
+  "fields": {
+    "image": "photos/104885011_p0_master1200.jpg",
+    "caption": "Разрешение 3000x2000",
+    "created_at": "2023-04-22T08:33:53.264Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 4,
+  "fields": {
+    "image": "photos/1647887259_9-gamerwall-pro-p-ataka-titanov-fon-krasivie-20.jpg",
+    "caption": "разрешение 2000х1500",
+    "created_at": "2023-04-22T08:34:18.146Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 5,
+  "fields": {
+    "image": "photos/lucy-cyberpunk-edgerunners-4k-wallpaper-uhdpaper.com-6911i.jpg",
+    "caption": "Lucy cyberpunk",
+    "created_at": "2023-04-22T08:34:54.691Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 6,
+  "fields": {
+    "image": "photos/Снимок_экрана_2023-03-08_в_15.59.23.png",
+    "caption": "Разрешение 2200х1300",
+    "created_at": "2023-04-22T08:35:13.959Z",
+    "author": 1
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 7,
+  "fields": {
+    "image": "photos/wp9326700-itasha-wallpapers.jpg",
+    "caption": "Иташи",
+    "created_at": "2023-04-22T09:11:15.509Z",
+    "author": 2
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 8,
+  "fields": {
+    "image": "photos/photo-1605907153179-8b364644a241.jpeg",
+    "caption": "GTR 34-ый",
+    "created_at": "2023-04-22T09:13:37.776Z",
+    "author": 2
+  }
+},
+{
+  "model": "webapp.photo",
+  "pk": 9,
+  "fields": {
+    "image": "photos/20522979.jpg",
+    "caption": "Разрешение 3000x2000",
+    "created_at": "2023-04-22T09:14:41.252Z",
+    "author": 2
+  }
+}
+]
