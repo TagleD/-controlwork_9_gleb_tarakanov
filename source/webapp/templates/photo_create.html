@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Создание фото{% endblock %}
+
+{% block content %}
+    <div class="container main-container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-5 card text-bg-light form-margins">
+                <h3>Создание фотографии</h3>
+                {% include 'partial/post_create_update_form.html' with button_text='Создать' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

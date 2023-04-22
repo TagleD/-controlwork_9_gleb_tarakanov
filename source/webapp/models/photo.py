@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Photo(models.Model):
-    avatar = models.ImageField(
+    image = models.ImageField(
         null=False,
         blank=False,
         upload_to='photos',
