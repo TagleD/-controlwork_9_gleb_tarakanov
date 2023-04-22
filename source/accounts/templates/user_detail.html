@@ -48,15 +48,7 @@
                 </table>
             </div>
             <div class="col-6 carousel-margin">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        {% for photo in favorite_photos %}
-                            <div class="carousel-item active">
-                                <img src="{{ photo.image.url }}" class="d-block w-100" alt="{{ photo.caption }}">
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
+                {% include 'partial/carousel.html' %}
             </div>
         </div>
     </div>
