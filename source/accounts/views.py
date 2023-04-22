@@ -1,6 +1,6 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.shortcuts import redirect
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import CreateView, TemplateView, DetailView
 
 from accounts.forms import CustomUserCreationForm, LoginForm
 
@@ -50,3 +50,9 @@ class RegisterView(CreateView):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+
+class UserDetail(DetailView):
+    template_name = 'user_detail.html'
+    model = get_user_model()
+    context_object_name = 'user_obj'
