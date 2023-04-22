@@ -38,7 +38,7 @@
                             <a class="nav-link active white center-link" aria-current="page"
                                href="#">Посмотреть задачи</a>
                         </li>
-{#                        {% if user.is_authenticated %}#}
+                        {% if user.is_authenticated %}
 {#                                {% if perms.webapp.add_task %}#}
                                     <li class="nav-item">
                                         <a class="nav-link active white" aria-current="page"
@@ -48,23 +48,22 @@
                                     </li>
 {#                                {% endif %}#}
                             <li>
-{#                                {{ user.username }}#}
-                                <p class="nav-link active white hello-text">User: <b></b></p>
+                                <p class="nav-link active white hello-text">User: <b>{{ user.username }}</b></p>
                             </li>
                             <li>
-                                <form action="#" method="post">
+                                <form action="{% url 'logout' %}" method="post">
                                     {% csrf_token %}
                                     <input type="submit" class="btn btn-primary login-buttons" value="Выйти">
                                 </form>
                             </li>
-{#                        {% else %}#}
+                        {% else %}
                             <li class="nav-item">
-                                <a class="nav-link active white" aria-current="page" href="#">Войти</a>
+                                <a class="nav-link active white" aria-current="page" href="{% url 'login' %}">Войти</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link active white" aria-current="page">Зарегистироваться</a>
+                                <a href="{% url 'register' %}" class="nav-link active white" aria-current="page">Зарегистироваться</a>
                             </li>
-{#                        {% endif %}#}
+                        {% endif %}
                     </ul>
                     {% block search %}{% endblock %}
                 </div>
