@@ -198,3 +198,19 @@ button {
 .bold-link {
     text-decoration: none;
 }
+
+.card-back {
+    margin-bottom: 20px;
+    background-color: rgba(236, 252, 246, 0.83) !important;
+}
+
+.card-paddings {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.edit-detail-button {
+    margin-left: 16px;
+    margin-bottom: 10px;
+}

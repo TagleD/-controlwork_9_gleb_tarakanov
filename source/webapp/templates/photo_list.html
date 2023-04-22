@@ -1,3 +1,36 @@
 {% extends 'base.html' %}
 
 {% block title %}Главная{% endblock %}
+
+{% block content %}
+    <div class="container main-container">
+        <div class="row">
+            <div class="col">
+                <h1 class="project-task-name-left">
+                    Последние фотографии
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            {% if photos %}
+                {% for photo in photos %}
+                    <div class="col-4">
+                        <div class="card card-back" style="width: 18rem;">
+                            <img src="{{ photo.image.url }}" class="card-img-top" alt="{{ photo.caption }}">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ photo.author.username }}</h4>
+                                <p class="card-text">{{ photo.caption }}</p>
+                                <p class="card-text">{{ photo.created_at }}</p>
+                                <a href="{% url 'photo_detail' photo.pk %}" class="btn btn-primary green">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-6">
+                    <h5>По вашему запросы задачи не найдены</h5>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
