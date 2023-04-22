@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.shortcuts import redirect
-from django.views.generic import CreateView, TemplateView, DetailView
+from django.urls import reverse
+from django.views.generic import CreateView, TemplateView, DetailView, UpdateView
 
-from accounts.forms import CustomUserCreationForm, LoginForm
+from accounts.forms import CustomUserCreationForm, LoginForm, UserForm
 
 
 # Create your views here.
@@ -52,7 +53,16 @@ def logout_view(request):
     return redirect('index')
 
 
-class UserDetail(DetailView):
+class UserDetailView(DetailView):
     template_name = 'user_detail.html'
     model = get_user_model()
     context_object_name = 'user_obj'
+
+
+class UserUpdateView(UpdateView):
+    template_name = 'user_update.html'
+    model = get_user_model()
+    form_class = UserForm
+
+    def get_success_url(self):
+        return reverse('user_detail', kwargs={'pk': self.object.pk})

@@ -37,7 +37,12 @@
                     <tr>
                         <th scope="row">#</th>
                         <td></td>
-                        <td><a href="#" class="btn btn-primary green user-edit-button">Редактировать</a></td>
+                        <td>
+                            <a href="{% url 'user_update' user_obj.id %}"
+                               class="btn btn-primary green user-edit-button">
+                                Редактировать
+                            </a>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
