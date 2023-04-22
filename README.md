@@ -13,3 +13,4 @@
 8) прописываем ./manage.py loaddata fixtures/auth.json
 9) прописываем ./manage.py loaddata fixtures/webapp.json
 10) прописываем ./manage.py runserver
+11) Пароли для всех юзеров 1982
